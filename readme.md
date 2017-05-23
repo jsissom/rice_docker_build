@@ -28,19 +28,19 @@ folder has your rice-config.xml file.
 
 The instructions below are how to build this image.
 
-# Copy the rice war file into the rice folder and name it kr-dev.war.
-# Building the riceweb image
+* Copy the rice war file into the rice folder and name it kr-dev.war.
+* Building the riceweb image
 
         docker build -t "jsissom/riceweb" .
 
         docker tag  jsissom/riceweb jsissom/riceweb:{rice version}
         docker tag jsissom/riceweb jsissom/riceweb:latest
 
-# Login to docker hub
+* Login to docker hub
 
         docker login
 
-# Put the image up there
+* Put the image up there
 
         docker push jsissom/riceweb
 
