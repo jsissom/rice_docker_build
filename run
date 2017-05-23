@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# used to use 172.16.173.1 as the address of the mac
+# changed it to 10.200.10.1 based on this article:
+# https://docs.docker.com/docker-for-mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host
+# ran this command:
+# sudo ifconfig lo0 alias 10.200.10.1/24
+
+docker run --name riceweb -p 8081:8081 --hostname=riceweb --add-host="kfsweb:10.200.10.1" --add-host="finweb.kuali.co:10.200.10.1" --add-host="oracle2:192.168.85.6" --add-host="mysql_kfs:192.168.85.3" -v /Users/jsissom/kuali/rice:/config -v /Users/jsissom/logs:/logs -d jsissom/riceweb
+
