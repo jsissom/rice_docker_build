@@ -26,8 +26,7 @@ mv /usr/local/rice/ojdbc6_11_2_0_1_0.jar /opt/tomcat/lib/
 # Deploy application
 mv /usr/local/rice/kr-dev.war /opt/tomcat/webapps
 
-# Install edited run file
-rm /usr/local/bin/run
+# Install run file
 mv /usr/local/rice/run /usr/local/bin/run
 
 # Setup config file
